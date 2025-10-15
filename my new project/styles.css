@@ -1,0 +1,304 @@
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background: #333;
+      color: white;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+    }
+    .sidebar-dark {
+            width: 250px;
+            height: 100vh;
+            background-color: #2a3038; /* Very dark gray/black */
+            color: #d1d2d3;
+            padding: 0;
+            position: fixed; /* Keep it visible */
+            overflow-y: auto; /* Enable scrolling if menu is long */
+        }
+        
+        /* Header Section (Logo & Toggle) */
+        .sidebar-header {
+            padding: 20px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #3d454d;
+        }
+        .sidebar-header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+        .sidebar-header .logo i {
+            color: #63c76a; /* Bright green logo element */
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+        .sidebar-header .menu-toggle {
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* User Profile Section */
+        .sidebar-user {
+            padding: 20px 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #3d454d;
+            margin-bottom: 10px;
+        }
+        .user-avatar {
+            width: 45px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid transparent; /* Placeholder for status indicator */
+        }
+        .user-status {
+            position: relative;
+            margin-right: 15px;
+        }
+        .user-status::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #63c76a; /* Green dot */
+            border-radius: 50%;
+            border: 2px solid #2a3038; /* Border to contrast with background */
+        }
+        .user-details h5 {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0;
+            color: white;
+        }
+        .user-details p {
+            font-size: 0.8rem;
+            margin-bottom: 0;
+            color: #b5b7b9;
+        }
+        .user-chat-icon {
+            margin-left: auto;
+            position: relative;
+            color: #b5b7b9;
+        }
+        .user-chat-icon .badge {
+            font-size: 0.6em;
+            padding: 4px 6px;
+            border-radius: 50%;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+        }
+
+        /* Menu Items */
+        .nav-category {
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: #63c76a; /* Bright green text */
+            padding: 15px 20px 5px 20px;
+            text-transform: uppercase;
+        }
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            position: relative;
+        }
+        .nav-item:hover, .nav-item.active {
+            background-color: #3d454d; /* Slightly lighter background on hover/active */
+        }
+        .nav-item.active {
+            /* Left border to indicate active state */
+            border-left: 3px solid #63c76a;
+            padding-left: 17px;
+        }
+        
+        .nav-link-text {
+            flex-grow: 1;
+            font-size: 0.95rem;
+            padding-left: 10px;
+        }
+        .nav-item i {
+            font-size: 1.1rem;
+            color: #9fa4a8; /* Muted icon color */
+        }
+        .nav-item .custom-icon {
+            /* Placeholder for custom icons that aren't in Bootstrap Icons */
+            font-family: 'FontAwesome', 'Bootstrap Icons'; /* Use a font that has these specific icons */
+        }
+
+        /* Dropdown Chevron */
+        .nav-item .bi-chevron-right {
+            margin-left: auto;
+            font-size: 0.75rem;
+            transition: transform 0.3s;
+        }
+        
+        /* Submenu (Hidden by default) - represented by the nested list */
+        .submenu {
+            background-color: #24292f; /* Slightly lighter than main sidebar */
+            padding-left: 0;
+        }
+        .submenu .nav-item {
+            padding-left: 40px;
+        }
+.btn {
+    display: block; 
+    width: 200px; 
+    padding: 12px 25px;
+    margin-bottom: 15px; 
+    color: rgb(222, 71, 71); 
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+   
+   
+    font-family: Arial, sans-serif;
+}
+
+.success {
+    background-color: #4CAF50; 
+}
+
+.info {
+    background-color: #673AB7; 
+}
+
+.warning {
+  color: #333; 
+}
+
+.danger {
+    background-color: #F44336;
+}
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+   
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+      
+  .gallery-item img {
+      width: 100%;
+      height:100%
+      transition: transform 0.3s ease;
+  }
+  .gallery-container {
+      display: grid;
+      gap: 15px;
+      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .gallery-item {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+    
+  }
+  .gallery-item:hover img {
+      transform: scale(1.05);
+
+  }
+
+    nav ul li a:hover {
+      background: #555;
+    }
+
+    /* Dropdown */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      background: #444;
+      top: 100%;
+      left: 0;
+      min-width: 150px;
+      z-index: 1000;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li a {
+      padding: 10px;
+    }
+
+    .page {
+      display: none;
+      padding: 20px;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-container {
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.gallery-item {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+    
+    .page:target {
+      display: block;
+    }
+  
